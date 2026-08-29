@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JRE Local Hub 燕三条POPUP & SHOWCASE in 東京駅｜2026.9.15–9.23</title>
-<meta name="description" content="金属加工の聖地・燕三条のこうばが東京駅改札内スクエア・ゼロに集結。2026年9月15日（火）〜23日（水）、10:00〜20:00。展示・販売・商談の9日間。">
+<meta name="description" content="金属加工の聖地・燕三条のこうばが、グランスタ東京 スクエア ゼロに集結。2026年9月15日（火）〜23日（水）。見る・買う・話すが楽しめる展示販売と、燕三条企業との商談ができる9日間。">
 
 <!-- OGP（SNSシェア用）　TODO: og:image を本番画像URLに差し替え -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="JRE Local Hub 燕三条POPUP & SHOWCASE in 東京駅">
-<meta property="og:description" content="燕三条のものづくりが東京駅改札内に集結。2026.9.15（火）–9.23（水）10:00–20:00、スクエア・ゼロにて。">
+<meta property="og:description" content="燕三条のものづくりが東京駅に集結。2026.9.15（火）–9.23（水）、グランスタ東京 スクエア ゼロにて。見る・買う・話す、そして商談も。">
 <meta property="og:image" content="https://example.com/ogp.jpg"><!-- TODO: 差し替え -->
 <meta name="twitter:card" content="summary_large_image">
 
@@ -60,6 +60,10 @@
   }
   .ph small{font-weight:500;font-size:.68rem;margin-top:.3rem;color:#9A958A}
 
+  /* 実写真 */
+  .photo{border-radius:10px;overflow:hidden}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
   /* ---------- ヘッダー ---------- */
   .topbar{
     position:sticky;top:0;z-index:60;
@@ -68,9 +72,11 @@
   }
   .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:54px}
   .topbar .brand{font-size:.72rem;letter-spacing:.14em;color:var(--gold);font-weight:700}
-  .topbar nav{display:flex;gap:1.1rem}
+  .topbar nav{display:flex;gap:1.1rem;align-items:center}
   .topbar nav a{font-size:.8rem;font-weight:700;color:#C6CFDD;text-decoration:none}
   .topbar nav a:hover{color:var(--gold)}
+  .topbar nav a.nav-cta{background:var(--gold);color:var(--navy);padding:.4rem 1rem;border-radius:999px}
+  .topbar nav a.nav-cta:hover{background:var(--gold-soft);color:var(--navy)}
   @media(max-width:680px){.topbar nav a.pc-only{display:none}}
 
   /* ---------- ヒーロー ---------- */
@@ -124,10 +130,6 @@
   .btn-outline{border-color:#55617A;color:#C6CFDD;background:transparent}
   .btn-outline:hover{background:var(--paper);color:var(--navy)}
   .hero-photo{margin-top:1.6rem}
-  .hero .ph{
-    background:repeating-linear-gradient(45deg,#1C2536 0 12px,#202A3D 12px 24px);
-    border-color:#3A4560;color:#6B7690;min-height:210px;
-  }
 
   /* ---------- マーキー ---------- */
   .marquee{
@@ -167,6 +169,7 @@
   .z-card .head{padding:.6rem 1rem;font-weight:900;font-size:.92rem;display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
   .z-card .head .en{font-family:var(--latin);font-size:1.15rem;letter-spacing:.06em;font-weight:400}
   .z-card .body{padding:.8rem 1rem 1rem;font-size:.84rem;color:var(--ink-soft);font-weight:500;line-height:1.75}
+  .z-card .body .zone-co{margin-top:.5rem;font-size:.76rem;color:#9A6B2F;font-weight:700;line-height:1.6}
   .c-gold{background:var(--gold);color:var(--navy)}
   .c-fire{background:var(--fire);color:#fff}
   .c-steel{background:#39404C;color:var(--paper)}
@@ -186,11 +189,6 @@
 
   /* ---------- 出展企業 ---------- */
   .exhibitors{background:var(--paper-warm)}
-  .exhibitors .badge{
-    display:inline-block;font-size:.7rem;font-weight:900;color:#fff;
-    background:var(--fire);border-radius:999px;padding:.15rem .7rem;
-    vertical-align:middle;margin-left:.5rem;letter-spacing:.06em;
-  }
   .e-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.3rem}
   .e-card{
     background:#fff;border-radius:10px;padding:1rem 1.1rem;
@@ -200,6 +198,12 @@
   .e-card p{font-size:.8rem;color:var(--ink-soft);font-weight:500;line-height:1.75;margin-top:.3rem}
   .e-note{font-size:.8rem;color:#7A7F88;font-weight:500;margin-top:1rem;text-align:center}
   @media(max-width:680px){.e-grid{grid-template-columns:1fr}}
+
+  .exh-list{margin-top:2.2rem;padding-top:1.8rem;border-top:1px solid rgba(30,36,48,.15)}
+  .exh-group{margin-bottom:1.1rem}
+  .exh-group .zone-label{display:inline-block;font-size:.68rem;font-weight:900;letter-spacing:.06em;padding:.2rem .7rem;border-radius:999px;margin-bottom:.6rem}
+  .exh-chips{display:flex;flex-wrap:wrap;gap:.5rem}
+  .exh-chip{background:#fff;border:1px solid rgba(30,36,48,.15);border-radius:8px;padding:.42rem .85rem;font-size:.82rem;font-weight:700;color:var(--ink)}
 
   /* ---------- 開催実績 ---------- */
   .record{background:var(--fire);color:#fff}
@@ -247,12 +251,6 @@
   .faq .a{padding:0 1.1rem 1rem 2.4rem;font-size:.85rem;color:var(--ink-soft);font-weight:500}
   .faq .a b{color:var(--ink)}
 
-  /* ---------- 出展をご検討の企業さまへ ---------- */
-  .exhibit{background:var(--paper-warm);border-top:2px solid var(--navy)}
-  .exhibit .inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.2rem}
-  .exhibit h2{font-family:var(--serif);font-weight:800;font-size:clamp(1.1rem,3vw,1.4rem)}
-  .exhibit p{font-size:.86rem;color:var(--ink-soft);font-weight:500;max-width:52ch;margin-top:.4rem}
-  .exhibit p b{color:var(--fire)}
   .btn-navy{background:var(--navy);color:var(--paper)}
   .btn-navy:hover{background:var(--fire);transform:translateY(-2px)}
 
@@ -278,6 +276,14 @@
   .sns-btn:hover{border-color:var(--gold);color:var(--gold)}
   .hashtag{font-size:.8rem;color:var(--gold);font-weight:700;margin-top:.9rem;letter-spacing:.04em}
 
+  /* ---------- 商談申込CTA ---------- */
+  .meeting-cta{
+    background:linear-gradient(120deg,var(--gold) 0%,var(--gold-soft) 100%);
+  }
+  .meeting-cta .inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.2rem}
+  .meeting-cta h2{font-family:var(--serif);font-weight:800;font-size:clamp(1.15rem,3vw,1.5rem);color:var(--navy)}
+  .meeting-cta p{font-size:.86rem;color:#4A3A16;font-weight:500;max-width:52ch;margin-top:.4rem}
+
   footer{background:var(--navy-deep);color:#55617A;text-align:center;padding:1.4rem 0;font-size:.72rem;font-weight:500}
 
   :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
@@ -294,6 +300,7 @@
       <a class="pc-only" href="#zones">会場構成</a>
       <a class="pc-only" href="#exhibitors">出展企業</a>
       <a href="#info">開催概要</a>
+      <a class="nav-cta" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSexneXFOoklZ3hTS4kpKVcAfb-eCQUTDgJ2f7WbUvn9XpViUA/viewform">商談を申し込む</a>
     </nav>
   </div>
 </div>
@@ -309,23 +316,24 @@
     <p class="sub-title">JRE Local Hub 燕三条</p>
     <h1>POPUP &amp;<br>SHOWCASE<br><span class="in">in 東京駅</span></h1>
     <div class="gold-rule"></div>
-    <p class="lead">金属加工の聖地・燕三条のこうばが、東京駅改札内に集結する9日間。包丁、銅器、爪切り、キャンプ道具。職人の手から生まれた道具を、買って、触れて、つくり手と話せます。</p>
+    <p class="lead">金属加工の聖地・燕三条のこうばが、東京駅構内に集結する9日間。包丁、銅器、爪切り、キャンプ道具。職人の手から生まれた道具を、買って、触れて、つくり手と話せます。会場では、その場での商談も可能です。</p>
 
     <div class="date-plate">
       <span class="num">9.15<em>–</em>9.23</span>
-      <span class="meta">2026年9月15日（火）〜23日（水）・9日間<br>10:00–20:00｜JR東京駅 スクエア・ゼロ（改札内）</span>
+      <span class="meta">2026年9月15日（火）〜23日（水）・9日間<br>10:00–20:00（初日11:00〜／最終日〜19:00）｜グランスタ東京 スクエア ゼロ（改札内）</span>
     </div>
 
     <div class="hero-cta">
-      <!-- Googleカレンダーに終日予定として追加 -->
       <a class="btn btn-gold" target="_blank" rel="noopener"
-         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=JRE%20Local%20Hub%20%E7%87%95%E4%B8%89%E6%9D%A1POPUP%20%26%20SHOWCASE%20in%20%E6%9D%B1%E4%BA%AC%E9%A7%85&dates=20260915/20260924&details=10%3A00%E2%80%9320%3A00%20%E9%96%8B%E5%82%AC%E3%80%82%E7%87%95%E4%B8%89%E6%9D%A1%E3%81%AE%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E3%81%8C%E6%9D%B1%E4%BA%AC%E9%A7%85%E6%94%B9%E6%9C%AD%E5%86%85%E3%81%AB%E9%9B%86%E7%B5%90%E3%80%82&location=JR%E6%9D%B1%E4%BA%AC%E9%A7%85%20%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%E3%83%BB%E3%82%BC%E3%83%AD%EF%BC%88%E6%94%B9%E6%9C%AD%E5%86%85%EF%BC%89">📅 カレンダーに追加</a>
+         href="https://docs.google.com/forms/d/e/1FAIpQLSexneXFOoklZ3hTS4kpKVcAfb-eCQUTDgJ2f7WbUvn9XpViUA/viewform">🤝 事前商談を申し込む</a>
+      <!-- Googleカレンダーに終日予定として追加 -->
+      <a class="btn btn-outline" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=JRE%20Local%20Hub%20%E7%87%95%E4%B8%89%E6%9D%A1POPUP%20%26%20SHOWCASE%20in%20%E6%9D%B1%E4%BA%AC%E9%A7%85&dates=20260915/20260924&details=10%3A00%E2%80%9320%3A00%E9%96%8B%E5%82%AC%EF%BC%88%E5%88%9D%E6%97%A5%E3%81%AF11%3A00%E3%80%9C%E3%80%81%E6%9C%80%E7%B5%82%E6%97%A5%E3%81%AF%E3%80%9C19%3A00%EF%BC%89%E3%80%82%E7%87%95%E4%B8%89%E6%9D%A1%E3%81%AE%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E3%81%8C%E6%9D%B1%E4%BA%AC%E9%A7%85%E3%81%AB%E9%9B%86%E7%B5%90%E3%80%82&location=JR%E6%9D%B1%E4%BA%AC%E9%A7%85%E6%A7%8B%E5%86%85%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%20%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%20%E3%82%BC%E3%83%AD%EF%BC%88%E6%94%B9%E6%9C%AD%E5%86%85%EF%BC%89">📅 カレンダーに追加</a>
       <a class="btn btn-outline" href="#zones">みどころを見る ↓</a>
     </div>
 
-    <!-- TODO: 会場写真に差し替え -->
-    <div class="hero-photo">
-      <div class="ph">会場写真（差し替え）<small>昨年の会場全景など・横長推奨</small></div>
+    <div class="hero-photo photo">
+      <img src="img/hero.jpg" alt="燕三条POPUP & SHOWCASE 会場の様子（2025年開催時）" loading="eager">
     </div>
   </div>
 </header>
@@ -347,10 +355,11 @@
         <h2 class="h2">駅ナカが燕三条になる</h2>
         <div class="gold-rule"></div>
         <p>新潟県のほぼ中央、燕市と三条市。世界のプロが指名買いする刃物や金属製品を生む、ものづくりの街です。</p>
-        <p>そのこうば（工場）が年に一度、東京駅改札内のイベントスペース<b>「スクエア・ゼロ」</b>に集まります。製品の展示・販売に加えて、同施設内の個室商談スペースやJRE Local Hub 燕三条とのオンライン接続による<b>商談</b>も行えます。</p>
+        <p>そのこうば（工場）が年に一度、東京駅構内のイベントスペース<b>「グランスタ東京 スクエア ゼロ」</b>に集まります。日用品からギフトアイテムまで、多彩な製品と技術が一堂に並ぶ、<b>見る・買う・話す</b>が楽しめる展示販売イベントです。商品の販売はもちろん、同施設内の個室商談スペースやJRE Local Hub 燕三条とのオンライン接続による<b>商談</b>も可能。ものづくりの現場を支える職人たちの想いにも、ぜひ触れてみてください。</p>
       </div>
-      <!-- TODO: 会場または製品の写真に差し替え -->
-      <div class="ph" style="min-height:240px">写真（差し替え）<small>製品または接客風景</small></div>
+      <div class="photo" style="min-height:240px">
+        <img src="img/about.jpg" alt="燕三条の製品と接客の様子（2025年開催時）">
+      </div>
     </div>
   </div>
 </section>
@@ -406,33 +415,44 @@
     <div class="z-grid">
       <div class="z-card">
         <div class="head c-gold"><span class="en">THE TSUBAMESANJO</span></div>
-        <div class="body">「見たことある」燕三条の定番製品を、実際に触れて購入できるメインコーナー。まずはここから。</div>
+        <div class="body">「見たことある」燕三条の定番製品を、実際に触れて購入できるメインコーナー。まずはここから。
+          <p class="zone-co">出展：諏訪田製作所／山谷産業／タケダ／燕物産</p>
+        </div>
       </div>
       <div class="z-card">
         <div class="head c-fire"><span class="en">FACTORY LIMITED</span></div>
-        <div class="body">工場限定品・試作品・少量流通品など、市場にほとんど出回らない製品を工場直販で。</div>
+        <div class="body">工場限定品・試作品・少量流通品など、市場にほとんど出回らない製品を工場直販で。
+          <p class="zone-co">出展：IPS／テーエム／アイマーク／アルチザン／水野製作所／丸山製作所／プログラフ／熊倉シャーリング／大倉製作所／いすゞ製作所／サクライ／ツボエ</p>
+        </div>
       </div>
       <div class="z-card">
         <div class="head c-steel"><span class="en">STOCK MARKET</span></div>
-        <div class="body">デッドストックや規格外品を扱う掘り出し物コーナー。一期一会の出会いと価格が楽しめます。</div>
+        <div class="body">デッドストックや規格外品を扱う掘り出し物コーナー。一期一会の出会いと価格が楽しめます。
+          <p class="zone-co">出展：旭金属工業／有本製作所</p>
+        </div>
       </div>
       <div class="z-card">
         <div class="head c-copper"><span class="en">MEIHIN-TEN</span>燕三条 名品展</div>
-        <div class="body">高級包丁や銅器などの逸品を、ギャラリーのように展示。工芸としての燕三条を鑑賞できます。</div>
+        <div class="body">高級包丁や銅器などの逸品を、ギャラリーのように展示。工芸としての燕三条を鑑賞できます。
+          <p class="zone-co">出展：後藤鉄工所／フチオカ／下村工業／須佐真（金工作家）</p>
+        </div>
       </div>
       <div class="z-card">
         <div class="head c-plum">ふるさと納税PR</div>
-        <div class="body">燕三条エリアの自治体による地域の魅力とふるさと納税のPRコーナー。</div>
+        <div class="body">燕三条エリアの自治体による地域の魅力とふるさと納税のPRコーナー。
+          <p class="zone-co">三条市ふるさと納税</p>
+        </div>
       </div>
       <div class="z-card">
         <div class="head c-navy">技術展示</div>
-        <div class="body">プレス・溶接・研磨など、こうばの技術そのものを展示。製造依頼や商談の相談はこちらから。</div>
+        <div class="body">プレス・溶接・研磨など、こうばの技術そのものを展示。製造依頼や商談の相談はこちらから。
+          <p class="zone-co">出展：後藤鉄工所／日本製鉄</p>
+        </div>
       </div>
     </div>
 
-    <!-- TODO: ブース配置確定後、実際のレイアウトに差し替え -->
     <div class="floormap">
-      <div class="label">FLOOR MAP（仮）</div>
+      <div class="label">FLOOR MAP</div>
       <div class="fm-grid">
         <div class="fm" style="background:var(--gold);color:var(--navy)">THE TSUBAMESANJO</div>
         <div class="fm" style="background:var(--fire);color:#fff">FACTORY<br>LIMITED</div>
@@ -441,7 +461,7 @@
         <div class="fm" style="background:#5B4A7A;color:#fff">ふるさと納税PR</div>
         <div class="fm" style="background:#24304A;color:#fff">技術展示・商談</div>
       </div>
-      <p class="note">※ 配置は準備中のイメージです。確定後に更新します。</p>
+      <p class="note">※ 出展社の配置は変更となる場合があります。最新情報は会場内の表示でご確認ください。</p>
     </div>
   </div>
 </section>
@@ -450,8 +470,9 @@
 <section class="exhibitors" id="exhibitors">
   <div class="wrap">
     <span class="kicker">EXHIBITORS</span>
-    <h2 class="h2">出展企業<span class="badge">続々決定中</span></h2>
+    <h2 class="h2">出展企業</h2>
     <div class="gold-rule"></div>
+    <p style="font-size:.86rem;color:var(--ink-soft);font-weight:700;margin-bottom:.4rem">PICK UP</p>
     <div class="e-grid">
       <div class="e-card">
         <h3>株式会社諏訪田製作所</h3>
@@ -488,6 +509,75 @@
     </div>
     <p class="e-note">ほかにも出展企業が決まり次第、順次掲載します。</p>
     <!-- TODO: 掲載可否は各社に確認のうえ公開（特に日本製鉄はSNS掲載不可回答あり）。追加企業はカードを複製して追記 -->
+
+    <div class="exh-list">
+      <p style="font-size:.86rem;color:var(--ink-soft);font-weight:700;margin-bottom:1rem">出展企業一覧</p>
+
+      <div class="exh-group">
+        <span class="zone-label" style="background:var(--gold);color:var(--navy)">THE TSUBAMESANJO</span>
+        <div class="exh-chips">
+          <span class="exh-chip">株式会社諏訪田製作所</span>
+          <span class="exh-chip">株式会社山谷産業</span>
+          <span class="exh-chip">株式会社タケダ</span>
+          <span class="exh-chip">燕物産株式会社</span>
+        </div>
+      </div>
+
+      <div class="exh-group">
+        <span class="zone-label" style="background:var(--fire);color:#fff">FACTORY LIMITED</span>
+        <div class="exh-chips">
+          <span class="exh-chip">株式会社IPS</span>
+          <span class="exh-chip">株式会社テーエム</span>
+          <span class="exh-chip">株式会社アイマーク</span>
+          <span class="exh-chip">株式会社アルチザン</span>
+          <span class="exh-chip">水野製作所株式会社</span>
+          <span class="exh-chip">株式会社丸山製作所</span>
+          <span class="exh-chip">プログラフ株式会社</span>
+          <span class="exh-chip">熊倉シャーリング有限会社</span>
+          <span class="exh-chip">株式会社大倉製作所</span>
+          <span class="exh-chip">株式会社いすゞ製作所</span>
+          <span class="exh-chip">株式会社サクライ</span>
+          <span class="exh-chip">株式会社ツボエ</span>
+        </div>
+      </div>
+
+      <div class="exh-group">
+        <span class="zone-label" style="background:#39404C;color:#fff">STOCK MARKET</span>
+        <div class="exh-chips">
+          <span class="exh-chip">旭金属工業株式会社</span>
+          <span class="exh-chip">株式会社有本製作所</span>
+        </div>
+      </div>
+
+      <div class="exh-group">
+        <span class="zone-label" style="background:#B0662F;color:#fff">燕三条 名品展</span>
+        <div class="exh-chips">
+          <span class="exh-chip">後藤鉄工所製作所</span>
+          <span class="exh-chip">株式会社フチオカ</span>
+          <span class="exh-chip">下村工業株式会社</span>
+          <span class="exh-chip">金工作家　須佐真</span>
+        </div>
+      </div>
+
+      <div class="exh-group">
+        <span class="zone-label" style="background:#24304A;color:#fff">技術展示</span>
+        <div class="exh-chips">
+          <span class="exh-chip">後藤鉄工所製作所</span>
+          <span class="exh-chip">日本製鉄株式会社</span>
+        </div>
+      </div>
+
+      <div class="exh-group">
+        <span class="zone-label" style="background:#8A857A;color:#fff">出展企業（コーナー調整中）</span>
+        <div class="exh-chips">
+          <span class="exh-chip">PXC</span>
+          <span class="exh-chip">株式会社五十嵐</span>
+          <span class="exh-chip">石上工業株式会社</span>
+          <span class="exh-chip">有限会社ストカ</span>
+          <span class="exh-chip">株式会社高義製作所</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -527,11 +617,10 @@
     <span class="kicker">GALLERY</span>
     <h2 class="h2">会場の様子</h2>
     <div class="gold-rule"></div>
-    <!-- TODO: 昨年の写真に差し替え（3〜6枚） -->
     <div class="gallery">
-      <div class="ph">写真①（差し替え）<small>会場の賑わい</small></div>
-      <div class="ph">写真②（差し替え）<small>接客・商談の様子</small></div>
-      <div class="ph">写真③（差し替え）<small>製品のクローズアップ</small></div>
+      <div class="photo"><img src="img/gallery-1.jpg" alt="会場の賑わい（2025年開催時）"></div>
+      <div class="photo"><img src="img/gallery-2.jpg" alt="通路に並ぶブースの様子（2025年開催時）"></div>
+      <div class="photo"><img src="img/gallery-3.jpg" alt="接客・商談の様子（2025年開催時）"></div>
     </div>
   </div>
 </section>
@@ -548,10 +637,11 @@
         <dl>
           <dt>名称</dt><dd>JRE Local Hub 燕三条POPUP &amp; SHOWCASE in 東京駅</dd>
           <dt>会期</dt><dd>2026年9月15日（火）〜9月23日（水）・9日間</dd>
-          <dt>時間</dt><dd>10:00〜20:00</dd>
-          <dt>会場</dt><dd>JR東京駅 スクエア・ゼロ（改札内）<br>〒100-0005 東京都千代田区丸の内1丁目9-9</dd>
+          <dt>時間</dt><dd>10:00〜20:00<br>※初日（9/15）は11:00〜、最終日（9/23）は〜19:00</dd>
+          <dt>会場</dt><dd>JR東京駅構内 B1「グランスタ東京」スクエア ゼロ（改札内）<br>〒100-0005 東京都千代田区丸の内1-9-1</dd>
           <dt>主催</dt><dd>燕三条こうばの窓口 ／ Dots and Lines</dd>
           <dt>入場</dt><dd>無料（改札内のため入場には乗車券等が必要です）</dd>
+          <dt>商談</dt><dd>会場での商談のほか、事前予約も受付中です</dd>
         </dl>
       </div>
       <div class="info-card">
@@ -592,20 +682,20 @@
     </details>
     <details>
       <summary><span class="q">Q</span>商談や製造の相談はできますか？</summary>
-      <div class="a">できます。会場と同施設内の個室商談スペースのほか、JRE Local Hub 燕三条とオンラインで接続した商談も可能です。会場スタッフにお声がけください。</div>
+      <div class="a">できます。会場と同施設内の個室商談スペースのほか、JRE Local Hub 燕三条とオンラインで接続した商談も可能です。当日お声がけいただくほか、<a href="https://docs.google.com/forms/d/e/1FAIpQLSexneXFOoklZ3hTS4kpKVcAfb-eCQUTDgJ2f7WbUvn9XpViUA/viewform" target="_blank" rel="noopener" style="color:var(--fire);font-weight:700">事前予約フォーム</a>からのお申し込みもおすすめです。</div>
     </details>
   </div>
 </section>
 
-<!-- ===== 出展をご検討の企業さまへ ===== -->
-<section class="exhibit" id="exhibit">
+<!-- ===== 商談申込CTA ===== -->
+<section class="meeting-cta" id="meeting">
   <div class="wrap inner">
     <div>
-      <span class="kicker">FOR EXHIBITORS</span>
-      <h2>出展をご検討の企業さまへ</h2>
-      <p>燕三条エリアの企業を対象に、2026年の出展を募集しています。来場<b>3万人規模</b>・購入率<b>約10%</b>の駅ナカ催事で、販売・PR・商談ができます。コーナー構成や条件の詳細は、お問い合わせください。</p>
+      <span class="kicker" style="color:#4A3A16">FOR BUSINESS</span>
+      <h2>燕三条企業との商談をご希望の方へ</h2>
+      <p>製造依頼・OEM・商品開発のご相談など、燕三条のこうばとの商談を承ります。会場内の個室商談スペースのほか、事前予約フォームからお申し込みいただくとスムーズです。</p>
     </div>
-    <a class="btn btn-navy" href="#contact">出展について問い合わせる →</a>
+    <a class="btn btn-navy" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSexneXFOoklZ3hTS4kpKVcAfb-eCQUTDgJ2f7WbUvn9XpViUA/viewform">事前商談を申し込む →</a>
   </div>
 </section>
 
@@ -616,9 +706,10 @@
     <h2 class="h2">お問い合わせ</h2>
     <div class="grid">
       <div>
-        <p style="font-size:.88rem;color:#C6CFDD;font-weight:500">イベント・出展についてのご質問はこちらへ。</p>
+        <p style="font-size:.88rem;color:#C6CFDD;font-weight:500">ご来場・商談についてのご質問はこちらへ。</p>
         <a class="line" href="tel:05017536875">050-1753-6875</a>
         <a class="line" href="mailto:info@factory-window.jp">info@factory-window.jp</a>
+        <a class="line" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSexneXFOoklZ3hTS4kpKVcAfb-eCQUTDgJ2f7WbUvn9XpViUA/viewform" style="font-size:.9rem">🤝 事前商談を申し込む →</a>
 
         <div class="sns-row">
           <a class="sns-btn" href="https://www.instagram.com/kouba_information_center/" target="_blank" rel="noopener">Instagram</a>
