@@ -166,6 +166,11 @@
   /* ---------- コーナー ---------- */
   .z-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
   .z-card{background:#fff;border:1px solid var(--navy);border-radius:10px;overflow:hidden}
+  .z-card .thumb{width:100%;height:150px;object-fit:cover;display:block}
+  .z-card .tile-ph{
+    width:100%;height:150px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--latin);letter-spacing:.06em;font-size:1rem;text-align:center;padding:.5rem;
+  }
   .z-card .head{padding:.6rem 1rem;font-weight:900;font-size:.92rem;display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
   .z-card .head .en{font-family:var(--latin);font-size:1.15rem;letter-spacing:.06em;font-weight:400}
   .z-card .body{padding:.8rem 1rem 1rem;font-size:.84rem;color:var(--ink-soft);font-weight:500;line-height:1.75}
@@ -183,8 +188,12 @@
     border-radius:10px;padding:1.1rem 1.2rem;
   }
   .floormap .label{font-size:.68rem;letter-spacing:.16em;color:#9A6B2F;font-weight:700;margin-bottom:.7rem}
-  .fm-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.4rem}
+  .fm-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}
   .fm{border-radius:5px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:900;text-align:center;padding:.2rem}
+  .fm.fm-wide{min-height:52px;grid-column:1 / -1}
+  .fm.fm-half{grid-column:span 3}
+  .fm.fm-third{grid-column:span 2}
+  @media(max-width:520px){.fm.fm-half,.fm.fm-third{grid-column:1 / -1}}
   .floormap .note{font-size:.72rem;color:#8A857A;font-weight:500;margin-top:.6rem}
 
   /* ---------- 出展企業 ---------- */
@@ -195,6 +204,8 @@
     border-left:4px solid var(--gold);
   }
   .e-card .thumb{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:.7rem;display:block}
+  .e-card .thumb-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-bottom:.7rem}
+  .e-card .thumb-row img{width:100%;height:90px;object-fit:cover;border-radius:6px;display:block}
   .e-card .tile{
     width:100%;height:140px;border-radius:8px;margin-bottom:.7rem;
     display:flex;align-items:center;justify-content:center;text-align:center;padding:.5rem;
@@ -339,7 +350,7 @@
     </div>
 
     <div class="hero-photo photo">
-      <img src="img/hero.jpg" alt="燕三条POPUP & SHOWCASE 会場の様子（2025年開催時）" loading="eager">
+      <img src="img/hero.jpg" alt="燕三条の職人が手がけた製品（2025年開催時の展示より）" loading="eager">
     </div>
   </div>
 </header>
@@ -405,7 +416,7 @@
       </div>
       <div class="v-card">
         <span class="en">BUYER</span>
-        <h3>バイヤー</h3>
+        <h3>小売店・セレクトショップの仕入れ担当</h3>
         <p>次に扱う商材探しに。会場と同施設内の個室でそのまま商談できます。</p>
       </div>
     </div>
@@ -421,36 +432,42 @@
     <div class="z-grid">
       <div class="z-card">
         <div class="head c-gold"><span class="en">THE TSUBAMESANJO</span></div>
+        <img class="thumb" src="img/zone-tsubamesanjo.jpg" alt="諏訪田製作所の刃物研磨の様子">
         <div class="body">「見たことある」燕三条の定番製品を、実際に触れて購入できるメインコーナー。まずはここから。
           <p class="zone-co">出展：諏訪田製作所／山谷産業／タケダ／燕物産</p>
         </div>
       </div>
       <div class="z-card">
         <div class="head c-fire"><span class="en">FACTORY LIMITED</span></div>
+        <img class="thumb" src="img/zone-factorylimited.jpg" alt="株式会社IPSの工具製品">
         <div class="body">工場限定品・試作品・少量流通品など、市場にほとんど出回らない製品を工場直販で。
           <p class="zone-co">出展：IPS／テーエム／アイマーク／アルチザン／水野製作所／丸山製作所／プログラフ／熊倉シャーリング／大倉製作所／いすゞ製作所／サクライ／ツボエ</p>
         </div>
       </div>
       <div class="z-card">
         <div class="head c-steel"><span class="en">STOCK MARKET</span></div>
+        <img class="thumb" src="img/zone-stockmarket.jpg" alt="株式会社有本製作所の工場設備">
         <div class="body">デッドストックや規格外品を扱う掘り出し物コーナー。一期一会の出会いと価格が楽しめます。
           <p class="zone-co">出展：旭金属工業／有本製作所</p>
         </div>
       </div>
       <div class="z-card">
         <div class="head c-copper"><span class="en">MEIHIN-TEN</span>燕三条 名品展</div>
+        <img class="thumb" src="img/zone-meihinten.jpg" alt="株式会社フチオカの外観">
         <div class="body">高級包丁や銅器などの逸品を、ギャラリーのように展示。工芸としての燕三条を鑑賞できます。
           <p class="zone-co">出展：後藤鉄工所／フチオカ／下村工業／須佐真（金工作家）</p>
         </div>
       </div>
       <div class="z-card">
         <div class="head c-plum">ふるさと納税PR</div>
+        <div class="tile-ph" style="background:#5B4A7A;color:#fff">ふるさと納税PR</div>
         <div class="body">燕三条エリアの自治体による地域の魅力とふるさと納税のPRコーナー。
           <p class="zone-co">三条市ふるさと納税</p>
         </div>
       </div>
       <div class="z-card">
         <div class="head c-navy">技術展示</div>
+        <div class="tile-ph" style="background:#24304A;color:var(--paper)">技術展示・商談</div>
         <div class="body">プレス・溶接・研磨など、こうばの技術そのものを展示。製造依頼や商談の相談はこちらから。
           <p class="zone-co">出展：後藤鉄工所</p>
         </div>
@@ -460,14 +477,14 @@
     <div class="floormap">
       <div class="label">FLOOR MAP</div>
       <div class="fm-grid">
-        <div class="fm" style="background:var(--gold);color:var(--navy)">THE TSUBAMESANJO</div>
-        <div class="fm" style="background:var(--fire);color:#fff">FACTORY<br>LIMITED</div>
-        <div class="fm" style="background:#39404C;color:#fff">STOCK<br>MARKET</div>
-        <div class="fm" style="background:#B0662F;color:#fff">名品展</div>
-        <div class="fm" style="background:#5B4A7A;color:#fff">ふるさと納税PR</div>
-        <div class="fm" style="background:#24304A;color:#fff">技術展示・商談</div>
+        <div class="fm fm-wide" style="background:var(--fire);color:#fff">FACTORY LIMITED（入口側の通路沿い）</div>
+        <div class="fm fm-half" style="background:var(--gold);color:var(--navy)">THE TSUBAMESANJO（メインエリア）</div>
+        <div class="fm fm-half" style="background:#B0662F;color:#fff">名品展</div>
+        <div class="fm fm-third" style="background:#39404C;color:#fff">STOCK MARKET</div>
+        <div class="fm fm-third" style="background:#5B4A7A;color:#fff">ふるさと納税PR</div>
+        <div class="fm fm-third" style="background:#24304A;color:#fff">技術展示・商談ゾーン</div>
       </div>
-      <p class="note">※ 出展社の配置は変更となる場合があります。最新情報は会場内の表示でご確認ください。</p>
+      <p class="note">※ 実際の配置図をもとにした簡易図です。出展社の配置は変更となる場合があります。最新情報は会場内の表示でご確認ください。</p>
     </div>
   </div>
 </section>
@@ -511,16 +528,31 @@
         <p>燕市の金属加工、高岡の伝統着色技法、山中漆器など、日本各地の手仕事を掛け合わせ、日常に静かな豊かさをもたらすものづくりを行っています。</p>
       </div>
       <div class="e-card">
-        <img class="thumb" src="img/exhibitor-ips.jpg" alt="株式会社IPSの製品">
+        <div class="thumb-row">
+          <img src="img/exhibitor-ips.jpg" alt="株式会社IPSの製品陳列">
+          <img src="img/exhibitor-ips-2.jpg" alt="株式会社IPSのプライヤー">
+          <img src="img/exhibitor-ips-3.jpg" alt="株式会社IPSの製造工程">
+        </div>
         <h3>株式会社IPS</h3>
+        <p>水道・配管まわりの作業に使うプライヤーやレンチなどのハンドツールメーカー。握りやすいグリップなど、使い手目線の工夫を凝らした工具を展開しています。</p>
       </div>
       <div class="e-card">
-        <img class="thumb" src="img/exhibitor-sakurai.jpg" alt="株式会社サクライの工場の様子">
+        <div class="thumb-row">
+          <img src="img/exhibitor-sakurai.jpg" alt="株式会社サクライの工場の様子">
+          <img src="img/exhibitor-sakurai-2.jpg" alt="株式会社サクライのフォーク製造工程">
+          <img src="img/exhibitor-sakurai-3.jpg" alt="株式会社サクライのカトラリー製品">
+        </div>
         <h3>株式会社サクライ</h3>
+        <p>プレス機がずらりと並ぶ工場で、フォークやスプーンなどの金属洋食器を製造。燕三条のものづくりを足元から支える技術力が強みです。</p>
       </div>
       <div class="e-card">
-        <img class="thumb" src="img/exhibitor-purograph.jpg" alt="プログラフ株式会社の外観">
+        <div class="thumb-row">
+          <img src="img/exhibitor-purograph.jpg" alt="プログラフ株式会社の外観">
+          <img src="img/exhibitor-purograph-2.jpg" alt="プログラフ株式会社のパッケージ製品">
+          <img src="img/exhibitor-purograph-3.jpg" alt="プログラフ株式会社の製造設備">
+        </div>
         <h3>プログラフ株式会社</h3>
+        <p>「MATERIALIZING VISIONS」を掲げ、金属加工技術を生かしたデザイン・試作から製造まで手がけるものづくり企業です。</p>
       </div>
       <div class="e-card">
         <div class="tile" style="background:#39404C;color:var(--paper)">STOCK<br>MARKET</div>
@@ -530,10 +562,15 @@
       <div class="e-card">
         <img class="thumb" src="img/exhibitor-arimoto.jpg" alt="株式会社有本製作所の工場の様子">
         <h3>株式会社有本製作所</h3>
+        <p>NC旋盤による精密な金属加工を得意とする企業。オーダーメイドの部品づくりから量産まで、幅広い加工ニーズに対応しています。</p>
       </div>
       <div class="e-card">
-        <img class="thumb" src="img/exhibitor-fuchioka.jpg" alt="株式会社フチオカの外観">
+        <div class="thumb-row" style="grid-template-columns:1fr 1fr">
+          <img src="img/exhibitor-fuchioka.jpg" alt="株式会社フチオカの外観">
+          <img src="img/exhibitor-fuchioka-2.jpg" alt="株式会社フチオカの研磨布製品">
+        </div>
         <h3>株式会社フチオカ</h3>
+        <p>研磨布・研磨材を扱う専門メーカー。金属を美しく仕上げるための資材を、燕三条のこうばに届けています。</p>
       </div>
     </div>
     <p class="e-note">ほかにも出展企業が決まり次第、順次掲載します。</p>
