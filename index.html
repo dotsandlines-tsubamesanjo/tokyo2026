@@ -188,13 +188,11 @@
     border-radius:10px;padding:1.1rem 1.2rem;
   }
   .floormap .label{font-size:.68rem;letter-spacing:.16em;color:#9A6B2F;font-weight:700;margin-bottom:.7rem}
-  .fm-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem}
-  .fm{border-radius:5px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:900;text-align:center;padding:.2rem}
-  .fm.fm-wide{min-height:52px;grid-column:1 / -1}
-  .fm.fm-half{grid-column:span 3}
-  .fm.fm-third{grid-column:span 2}
-  @media(max-width:520px){.fm.fm-half,.fm.fm-third{grid-column:1 / -1}}
-  .floormap .note{font-size:.72rem;color:#8A857A;font-weight:500;margin-top:.6rem}
+  .fm-svg{width:100%;height:auto;max-width:420px;display:block;margin-inline:auto}
+  .fm-t{fill:#fff;font-family:var(--sans);font-weight:900;font-size:15px;letter-spacing:.02em}
+  .fm-t-lg{font-size:17px}
+  .fm-t-dark{fill:var(--navy)}
+  .floormap .note{font-size:.72rem;color:#8A857A;font-weight:500;margin-top:.9rem}
 
   /* ---------- 出展企業 ---------- */
   .exhibitors{background:var(--paper-warm)}
@@ -476,14 +474,40 @@
 
     <div class="floormap">
       <div class="label">FLOOR MAP</div>
-      <div class="fm-grid">
-        <div class="fm fm-wide" style="background:var(--fire);color:#fff">FACTORY LIMITED（入口側の通路沿い）</div>
-        <div class="fm fm-half" style="background:var(--gold);color:var(--navy)">THE TSUBAMESANJO（メインエリア）</div>
-        <div class="fm fm-half" style="background:#B0662F;color:#fff">名品展</div>
-        <div class="fm fm-third" style="background:#39404C;color:#fff">STOCK MARKET</div>
-        <div class="fm fm-third" style="background:#5B4A7A;color:#fff">ふるさと納税PR</div>
-        <div class="fm fm-third" style="background:#24304A;color:#fff">技術展示・商談ゾーン</div>
-      </div>
+      <svg class="fm-svg" viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場フロアマップ：奥にFACTORY LIMITED、左手前にTHE TSUBAMESANJO、中央にSTOCK MARKETと技術展示・商談ゾーン、右に燕三条名品展、左上角にふるさと納税PR、右手前にレジ">
+        <rect x="0" y="0" width="500" height="480" rx="10" fill="#fff"/>
+        <!-- ふるさと納税PR：入口側の角 -->
+        <rect x="3" y="3" width="54" height="64" rx="6" fill="#5B4A7A"/>
+        <text x="30" y="30" text-anchor="middle" class="fm-t">ふるさと</text>
+        <text x="30" y="44" text-anchor="middle" class="fm-t">納税PR</text>
+        <!-- FACTORY LIMITED：奥の通路沿い（上段＋左上） -->
+        <rect x="60" y="3" width="437" height="64" rx="6" fill="var(--fire)"/>
+        <text x="278" y="40" text-anchor="middle" class="fm-t fm-t-lg">FACTORY LIMITED</text>
+        <rect x="3" y="70" width="107" height="93" rx="6" fill="var(--fire)"/>
+        <text x="56" y="112" text-anchor="middle" class="fm-t">FACTORY</text>
+        <text x="56" y="126" text-anchor="middle" class="fm-t">LIMITED</text>
+        <!-- THE TSUBAMESANJO：左手前のメインエリア -->
+        <rect x="3" y="166" width="107" height="311" rx="6" fill="var(--gold)"/>
+        <text x="56" y="310" text-anchor="middle" class="fm-t fm-t-dark">THE</text>
+        <text x="56" y="326" text-anchor="middle" class="fm-t fm-t-dark">TSUBAME-</text>
+        <text x="56" y="342" text-anchor="middle" class="fm-t fm-t-dark">SANJO</text>
+        <!-- STOCK MARKET：中央左 -->
+        <rect x="113" y="70" width="132" height="407" rx="6" fill="#39404C"/>
+        <text x="179" y="265" text-anchor="middle" class="fm-t">STOCK</text>
+        <text x="179" y="279" text-anchor="middle" class="fm-t">MARKET</text>
+        <!-- 技術展示・商談ゾーン：中央右 -->
+        <rect x="248" y="70" width="135" height="407" rx="6" fill="#24304A"/>
+        <text x="315" y="255" text-anchor="middle" class="fm-t">技術展示</text>
+        <text x="315" y="269" text-anchor="middle" class="fm-t">・商談</text>
+        <text x="315" y="283" text-anchor="middle" class="fm-t">ゾーン</text>
+        <!-- 燕三条 名品展：右奥 -->
+        <rect x="386" y="70" width="111" height="248" rx="6" fill="#B0662F"/>
+        <text x="441" y="185" text-anchor="middle" class="fm-t">燕三条</text>
+        <text x="441" y="199" text-anchor="middle" class="fm-t">名品展</text>
+        <!-- レジ：右手前の目印 -->
+        <rect x="386" y="324" width="111" height="153" rx="6" fill="#8A857A"/>
+        <text x="441" y="404" text-anchor="middle" class="fm-t">レジ</text>
+      </svg>
       <p class="note">※ 実際の配置図をもとにした簡易図です。出展社の配置は変更となる場合があります。最新情報は会場内の表示でご確認ください。</p>
     </div>
   </div>
