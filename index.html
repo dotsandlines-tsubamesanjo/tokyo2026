@@ -188,6 +188,7 @@
     border-radius:10px;padding:1.1rem 1.2rem;
   }
   .floormap .label{font-size:.68rem;letter-spacing:.16em;color:#9A6B2F;font-weight:700;margin-bottom:.7rem}
+  .fm-compass{display:flex;justify-content:space-between;gap:.5rem;max-width:420px;margin:0 auto .5rem;font-size:.68rem;font-weight:700;color:var(--ink-soft);letter-spacing:.01em}
   .fm-svg{width:100%;height:auto;max-width:420px;display:block;margin-inline:auto}
   .fm-t{fill:#fff;font-family:var(--sans);font-weight:900;font-size:15px;letter-spacing:.02em}
   .fm-t-lg{font-size:17px}
@@ -477,7 +478,11 @@
 
     <div class="floormap">
       <div class="label">FLOOR MAP</div>
-      <svg class="fm-svg" viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場フロアマップ：奥にFACTORY LIMITED、左手前にTHE TSUBAMESANJO、中央にSTOCK MARKETと技術展示、商談ゾーン、右に燕三条名品展、左上角にふるさと納税PR、右手前にレジ。ブースの間は通路になっています">
+      <div class="fm-compass">
+        <span>◀ 丸の内地下中央口改札</span>
+        <span>八重洲地下中央口改札 ▶</span>
+      </div>
+      <svg class="fm-svg" viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場フロアマップ：左が丸の内地下中央口改札側、右が八重洲地下中央口改札側。奥にFACTORY LIMITED、左手前にTHE TSUBAMESANJO、中央にSTOCK MARKETと技術展示、商談ゾーン、右に燕三条名品展、左上角にふるさと納税PR、右手前にレジ。ブースの間は通路になっています">
               <rect x="0" y="0" width="600" height="540" rx="10" fill="#F4F0DE"/>
               <rect x="14" y="12" width="572" height="500" rx="8" fill="none" stroke="#C9C4B0" stroke-width="2" stroke-dasharray="2 4"/>
               <rect x="24" y="26" width="34" height="34" rx="4" fill="#5B4A7A" transform="rotate(45 41 43)"/>
