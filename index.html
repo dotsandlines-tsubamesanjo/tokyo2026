@@ -188,8 +188,10 @@
     border-radius:10px;padding:1.1rem 1.2rem;
   }
   .floormap .label{font-size:.68rem;letter-spacing:.16em;color:#9A6B2F;font-weight:700;margin-bottom:.7rem}
-  .fm-compass{display:flex;justify-content:space-between;gap:.5rem;max-width:420px;margin:0 auto .5rem;font-size:.68rem;font-weight:700;color:var(--ink-soft);letter-spacing:.01em}
-  .fm-svg{width:100%;height:auto;max-width:420px;display:block;margin-inline:auto}
+  .fm-compass-top,.fm-compass-bottom{text-align:center;max-width:360px;margin:0 auto;font-size:.68rem;font-weight:700;color:var(--ink-soft);letter-spacing:.01em}
+  .fm-compass-top{margin-bottom:.5rem}
+  .fm-compass-bottom{margin-top:.7rem}
+  .fm-svg{width:100%;height:auto;max-width:360px;display:block;margin-inline:auto}
   .fm-t{fill:#fff;font-family:var(--sans);font-weight:900;font-size:15px;letter-spacing:.02em}
   .fm-t-lg{font-size:17px}
   .fm-t-dark{fill:var(--navy)}
@@ -478,80 +480,76 @@
 
     <div class="floormap">
       <div class="label">FLOOR MAP</div>
-      <div class="fm-compass">
-        <span>◀ 丸の内地下中央口改札</span>
-        <span>八重洲地下中央口改札 ▶</span>
-      </div>
-      <svg class="fm-svg" viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場フロアマップ：配置図CADをもとに実寸比率で作成。左が丸の内地下中央口改札側、右が八重洲地下中央口改札側。中央に大小2本の柱、商談テーブルが2卓、右下にレジがあります">
+      <div class="fm-compass-top">▲ 八重洲地下中央口改札側</div>
+      <svg class="fm-svg" viewBox="0 0 540 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場フロアマップ：配置図CADをもとに実寸比率・実際の向きで作成。上が八重洲地下中央口改札側、下が丸の内地下中央口改札側。中央に大小2本の柱、商談テーブルが2卓、右側にレジがあります">
         <defs>
           <pattern id="fmPillar" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
             <rect width="7" height="7" fill="#3A3630"/>
             <line x1="0" y1="0" x2="0" y2="7" stroke="#1E1B17" stroke-width="3.2"/>
           </pattern>
         </defs>
-        <rect x="0" y="0" width="600" height="540" rx="10" fill="#F4F0DE"/>
-        <rect x="14" y="12" width="572" height="500" rx="8" fill="none" stroke="#C9C4B0" stroke-width="2" stroke-dasharray="2 4"/>
-        <rect x="106.4" y="72.3" width="16" height="16" rx="2" fill="#5B4A7A" transform="rotate(45 114.4 80.3)"/>
-        <rect x="141.2" y="72.0" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="197.5" y="72.0" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="254.0" y="72.0" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="310.5" y="72.0" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="367.0" y="72.0" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="423.5" y="72.0" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="480.0" y="72.0" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="99.2" y="104.3" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="99.2" y="130.1" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="99.2" y="179.4" width="25.4" height="23.2" rx="2" fill="var(--fire)" />
-        <rect x="84.0" y="232.2" width="62.1" height="24.7" rx="2" fill="var(--gold)" />
-        <rect x="84.0" y="294.6" width="62.1" height="24.7" rx="2" fill="var(--gold)" />
-        <rect x="84.0" y="353.1" width="62.1" height="24.7" rx="2" fill="var(--gold)" />
-        <rect x="84.0" y="410.7" width="62.1" height="24.7" rx="2" fill="var(--gold)" />
-        <rect x="84.0" y="468.8" width="62.1" height="24.7" rx="2" fill="var(--gold)" />
-        <rect x="236.3" y="148.4" width="25.2" height="23.0" rx="2" fill="#39404C" />
-        <rect x="262.4" y="148.4" width="25.2" height="23.0" rx="2" fill="#39404C" />
-        <rect x="236.3" y="172.2" width="25.2" height="23.0" rx="2" fill="#39404C" />
-        <rect x="235.3" y="216.3" width="25.7" height="23.4" rx="2" fill="#39404C" />
-        <rect x="235.3" y="259.2" width="25.7" height="23.4" rx="2" fill="#39404C" />
-        <rect x="547.2" y="69.4" width="25.7" height="23.4" rx="2" fill="#39404C" />
-        <rect x="547.2" y="112.6" width="25.7" height="23.2" rx="2" fill="#39404C" />
-        <rect x="375.6" y="147.3" width="25.2" height="23.4" rx="2" fill="#24304A" />
-        <rect x="375.6" y="183.5" width="25.2" height="23.4" rx="2" fill="#24304A" />
-        <rect x="375.6" y="221.1" width="25.2" height="23.4" rx="2" fill="#24304A" />
-        <rect x="500.3" y="172.9" width="25.7" height="47.0" rx="2" fill="#B0662F" />
-        <rect x="547.9" y="172.9" width="25.7" height="47.0" rx="2" fill="#B0662F" />
-        <rect x="491.7" y="256.9" width="25.7" height="47.0" rx="2" fill="#B0662F" />
-        <rect x="281.3" y="187.3" width="69.1" height="63.0" rx="2" fill="url(#fmPillar)" stroke="#1E1B17" stroke-width="2.5"/>
-        <rect x="442.2" y="394.8" width="68.9" height="36.2" rx="2" fill="url(#fmPillar)" stroke="#1E1B17" stroke-width="2.5"/>
-        <rect x="242.8" y="378.0" width="103.2" height="19.1" rx="2" fill="#8A857A" />
-        <rect x="201.9" y="386.9" width="25.7" height="46.8" rx="2" fill="#5C7A5E" />
-        <rect x="201.9" y="433.7" width="25.7" height="46.8" rx="2" fill="#5C7A5E" />
-        <rect x="227.6" y="470.5" width="51.8" height="21.9" rx="2" fill="#5C7A5E" />
-        <circle cx="326.8" cy="160.9" r="13" fill="#F4F0DE" stroke="#6B6558" stroke-width="1.8"/>
-        <rect x="322.8" y="136.9" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
-        <rect x="305.5" y="166.9" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
-        <rect x="340.1" y="166.9" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
-        <circle cx="375.9" cy="271.6" r="13" fill="#F4F0DE" stroke="#6B6558" stroke-width="1.8"/>
-        <rect x="371.9" y="247.6" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
-        <rect x="354.6" y="277.6" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
-        <rect x="389.2" y="277.6" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
-        <text x="50" y="193" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">FACTORY</text>
-        <text x="50" y="204" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">LIMITED</text>
-        <text x="50" y="357" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">THE</text>
-        <text x="50" y="368" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">TSUBAME-</text>
-        <text x="50" y="379" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">SANJO</text>
-        <text x="190" y="210" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.5px">STOCK</text>
-        <text x="190" y="221" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.5px">MARKET</text>
-        <text x="445" y="180" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:9px">技術</text>
-        <text x="445" y="191" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:9px">展示</text>
-        <text x="533" y="152" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.5px">燕三条</text>
-        <text x="533" y="163" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.5px">名品展</text>
-        <text x="294" y="373" text-anchor="middle" class="fm-t" style="font-size:8.5px">レジ</text>
-        <text x="214.75" y="436" text-anchor="middle" class="fm-t" style="font-size:7px" transform="rotate(-90 214.75 433)">FARM8</text>
-        <text x="315.5" y="222" text-anchor="middle" class="fm-t" style="font-size:9px">柱</text>
-        <text x="476.5" y="414" text-anchor="middle" class="fm-t" style="font-size:9px">柱</text>
-        <text x="41" y="68" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:7.2px">ふるさと</text>
-        <text x="41" y="78" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:7.2px">納税PR</text>
+        <rect x="0" y="0" width="540" height="600" rx="10" fill="#F4F0DE"/>
+        <rect x="12" y="14" width="500" height="572" rx="8" fill="none" stroke="#C9C4B0" stroke-width="2" stroke-dasharray="2 4"/>
+        <rect x="72.3" y="477.6" width="16" height="16" rx="2" fill="#5B4A7A" transform="rotate(45 80.3 485.6)"/>
+        <rect x="72.0" y="433.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="72.0" y="377.0" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="72.0" y="320.5" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="72.0" y="264.0" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="72.0" y="207.5" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="72.0" y="151.0" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="72.0" y="94.5" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="104.3" y="475.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="130.1" y="475.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="179.4" y="475.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
+        <rect x="232.2" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
+        <rect x="294.6" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
+        <rect x="353.1" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
+        <rect x="410.7" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
+        <rect x="468.8" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
+        <rect x="148.4" y="338.5" width="23.0" height="25.2" rx="2" fill="#39404C" />
+        <rect x="148.4" y="312.4" width="23.0" height="25.2" rx="2" fill="#39404C" />
+        <rect x="172.2" y="338.5" width="23.0" height="25.2" rx="2" fill="#39404C" />
+        <rect x="216.3" y="339.0" width="23.4" height="25.7" rx="2" fill="#39404C" />
+        <rect x="259.2" y="339.0" width="23.4" height="25.7" rx="2" fill="#39404C" />
+        <rect x="69.4" y="27.1" width="23.4" height="25.7" rx="2" fill="#39404C" />
+        <rect x="112.6" y="27.1" width="23.2" height="25.7" rx="2" fill="#39404C" />
+        <rect x="147.3" y="199.1" width="23.4" height="25.2" rx="2" fill="#24304A" />
+        <rect x="183.5" y="199.1" width="23.4" height="25.2" rx="2" fill="#24304A" />
+        <rect x="221.1" y="199.1" width="23.4" height="25.2" rx="2" fill="#24304A" />
+        <rect x="172.9" y="74.0" width="47.0" height="25.7" rx="2" fill="#B0662F" />
+        <rect x="172.9" y="26.4" width="47.0" height="25.7" rx="2" fill="#B0662F" />
+        <rect x="256.9" y="82.6" width="47.0" height="25.7" rx="2" fill="#B0662F" />
+        <rect x="187.3" y="249.6" width="63.0" height="69.1" rx="2" fill="url(#fmPillar)" stroke="#1E1B17" stroke-width="2.5"/>
+        <rect x="394.8" y="88.9" width="36.2" height="68.9" rx="2" fill="url(#fmPillar)" stroke="#1E1B17" stroke-width="2.5"/>
+        <rect x="378.0" y="254.0" width="19.1" height="103.2" rx="2" fill="#8A857A" />
+        <rect x="386.9" y="372.4" width="46.8" height="25.7" rx="2" fill="#5C7A5E" />
+        <rect x="433.7" y="372.4" width="46.8" height="25.7" rx="2" fill="#5C7A5E" />
+        <rect x="470.5" y="320.5" width="21.9" height="51.8" rx="2" fill="#5C7A5E" />
+        <circle cx="160.9" cy="273.2" r="13" fill="#F4F0DE" stroke="#6B6558" stroke-width="1.8"/>
+        <rect x="156.9" y="249.2" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
+        <rect x="139.6" y="279.2" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
+        <rect x="174.2" y="279.2" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
+        <circle cx="271.6" cy="224.1" r="13" fill="#F4F0DE" stroke="#6B6558" stroke-width="1.8"/>
+        <rect x="267.6" y="200.1" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
+        <rect x="250.3" y="230.1" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
+        <rect x="284.9" y="230.1" width="8" height="8" rx="1.5" fill="none" stroke="#6B6558" stroke-width="1.6"/>
+        <text x="40" y="271" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">FACTORY</text>
+        <text x="40" y="282" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">LIMITED</text>
+        <text x="363" y="436" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.5px">THE TSUBAMESANJO</text>
+        <text x="190" y="381" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">STOCK</text>
+        <text x="190" y="391" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.2px">MARKET</text>
+        <text x="196" y="163" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.5px">技術</text>
+        <text x="196" y="174" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8.5px">展示</text>
+        <text x="350" y="55" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8px">燕三条</text>
+        <text x="350" y="65" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:8px">名品展</text>
+        <text x="387.5" y="309" text-anchor="middle" class="fm-t" style="font-size:8.5px" transform="rotate(-90 387.5 309)">レジ</text>
+        <text x="439" y="363" text-anchor="middle" class="fm-t" style="font-size:7.5px">FARM8</text>
+        <text x="218.8" y="288" text-anchor="middle" class="fm-t" style="font-size:9px">柱</text>
+        <text x="412.9" y="127" text-anchor="middle" class="fm-t" style="font-size:9px">柱</text>
+        <text x="80" y="517" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:7px">ふるさと</text>
+        <text x="80" y="527" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:7px">納税PR</text>
       </svg>
+      <div class="fm-compass-bottom">丸の内地下中央口改札側 ▼</div>
       <div class="fm-legend"><span class="fm-legend-item"><i style="background:var(--fire)"></i>FACTORY LIMITED</span><span class="fm-legend-item"><i style="background:var(--gold)"></i>THE TSUBAMESANJO</span><span class="fm-legend-item"><i style="background:#39404C"></i>STOCK MARKET</span><span class="fm-legend-item"><i style="background:#24304A"></i>技術展示</span><span class="fm-legend-item"><i style="background:#B0662F"></i>燕三条 名品展</span><span class="fm-legend-item"><i style="background:#5C7A5E"></i>FARM8</span><span class="fm-legend-item"><i style="background:#5B4A7A"></i>ふるさと納税PR</span><span class="fm-legend-item"><i style="background:#8A857A"></i>レジ</span><span class="fm-legend-item"><i style="background:repeating-linear-gradient(45deg,#7A766B 0 3px,#5B584E 3px 6px)"></i>柱（目印）</span><span class="fm-legend-item"><i style="background:none;border:1.6px solid #6B6558;border-radius:50%"></i>商談テーブル</span></div>
       <p class="note">※ 実際の配置図をもとにした簡易図です。出展社の配置は変更となる場合があります。最新情報は会場内の表示でご確認ください。</p>
     </div>
