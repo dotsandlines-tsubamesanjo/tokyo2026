@@ -19,16 +19,16 @@
 
 <style>
   :root{
-    --navy:#141B2A;
-    --navy-deep:#0E1420;
-    --navy-line:#2E3A52;
-    --gold:#C9A227;
-    --gold-soft:#E4C86A;
-    --fire:#E8401F;
+    --navy:#221815;
+    --navy-deep:#150F0D;
+    --navy-line:#463D36;
+    --gold:#22AC38;
+    --gold-soft:#4FC768;
+    --fire:#178A2C;
     --paper:#F4F2EC;
-    --paper-warm:#EAE6DC;
-    --ink:#1E2430;
-    --ink-soft:#4A5058;
+    --paper-warm:#E8EFE9;
+    --ink:#221815;
+    --ink-soft:#5C5650;
     --serif:"Shippori Mincho",serif;
     --sans:"Zen Kaku Gothic New",system-ui,sans-serif;
     --latin:"Bebas Neue",sans-serif;
@@ -41,7 +41,7 @@
   }
   img{max-width:100%;display:block}
   .wrap{width:min(1020px,92vw);margin-inline:auto}
-  .kicker{font-size:.72rem;letter-spacing:.28em;color:#9A6B2F;font-weight:700}
+  .kicker{font-size:.72rem;letter-spacing:.28em;color:var(--fire);font-weight:700}
   .h2{
     font-family:var(--serif);font-weight:800;
     font-size:clamp(1.45rem,4.4vw,2.1rem);line-height:1.3;
@@ -174,9 +174,9 @@
   .z-card .head{padding:.6rem 1rem;font-weight:900;font-size:.92rem;display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
   .z-card .head .en{font-family:var(--latin);font-size:1.15rem;letter-spacing:.06em;font-weight:400}
   .z-card .body{padding:.8rem 1rem 1rem;font-size:.84rem;color:var(--ink-soft);font-weight:500;line-height:1.75}
-  .z-card .body .zone-co{margin-top:.5rem;font-size:.76rem;color:#9A6B2F;font-weight:700;line-height:1.6}
-  .c-gold{background:var(--gold);color:var(--navy)}
-  .c-fire{background:var(--fire);color:#fff}
+  .z-card .body .zone-co{margin-top:.5rem;font-size:.76rem;color:var(--fire);font-weight:700;line-height:1.6}
+  .c-gold{background:#C9A227;color:#fff}
+  .c-fire{background:#E8401F;color:#fff}
   .c-steel{background:#39404C;color:var(--paper)}
   .c-copper{background:#B0662F;color:#fff}
   .c-plum{background:#5B4A7A;color:#fff}
@@ -184,10 +184,10 @@
   @media(max-width:680px){.z-grid{grid-template-columns:1fr}}
 
   .floormap{
-    margin-top:1.4rem;background:#fff;border:1px dashed #9A6B2F;
+    margin-top:1.4rem;background:#fff;border:1px dashed var(--fire);
     border-radius:10px;padding:1.1rem 1.2rem;
   }
-  .floormap .label{font-size:.68rem;letter-spacing:.16em;color:#9A6B2F;font-weight:700;margin-bottom:.7rem}
+  .floormap .label{font-size:.68rem;letter-spacing:.16em;color:var(--fire);font-weight:700;margin-bottom:.7rem}
   .fm-compass-top,.fm-compass-bottom{text-align:center;max-width:360px;margin:0 auto;font-size:.68rem;font-weight:700;color:var(--ink-soft);letter-spacing:.01em}
   .fm-compass-top{margin-bottom:.5rem}
   .fm-compass-bottom{margin-top:.7rem}
@@ -254,7 +254,7 @@
   .info-card{background:#fff;border:1px solid var(--navy);border-radius:10px;padding:1.4rem 1.5rem}
   .info-card h3{font-family:var(--serif);font-weight:800;font-size:1.05rem;margin-bottom:.8rem}
   .info-card dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem .9rem;font-size:.88rem}
-  .info-card dt{font-weight:900;color:#9A6B2F;white-space:nowrap}
+  .info-card dt{font-weight:900;color:var(--fire);white-space:nowrap}
   .info-card dd{font-weight:500}
   @media(max-width:780px){.info-grid{grid-template-columns:1fr}}
 
@@ -491,21 +491,21 @@
         <rect x="0" y="0" width="540" height="600" rx="10" fill="#F4F0DE"/>
         <rect x="12" y="14" width="500" height="572" rx="8" fill="none" stroke="#C9C4B0" stroke-width="2" stroke-dasharray="2 4"/>
         <rect x="72.3" y="477.6" width="16" height="16" rx="2" fill="#5B4A7A" transform="rotate(45 80.3 485.6)"/>
-        <rect x="72.0" y="433.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="72.0" y="377.0" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="72.0" y="320.5" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="72.0" y="264.0" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="72.0" y="207.5" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="72.0" y="151.0" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="72.0" y="94.5" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="104.3" y="475.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="130.1" y="475.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="179.4" y="475.3" width="23.2" height="25.4" rx="2" fill="var(--fire)" />
-        <rect x="232.2" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
-        <rect x="294.6" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
-        <rect x="353.1" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
-        <rect x="410.7" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
-        <rect x="468.8" y="453.9" width="24.7" height="62.1" rx="2" fill="var(--gold)" />
+        <rect x="72.0" y="433.3" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="72.0" y="377.0" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="72.0" y="320.5" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="72.0" y="264.0" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="72.0" y="207.5" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="72.0" y="151.0" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="72.0" y="94.5" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="104.3" y="475.3" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="130.1" y="475.3" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="179.4" y="475.3" width="23.2" height="25.4" rx="2" fill="#E8401F" />
+        <rect x="232.2" y="453.9" width="24.7" height="62.1" rx="2" fill="#C9A227" />
+        <rect x="294.6" y="453.9" width="24.7" height="62.1" rx="2" fill="#C9A227" />
+        <rect x="353.1" y="453.9" width="24.7" height="62.1" rx="2" fill="#C9A227" />
+        <rect x="410.7" y="453.9" width="24.7" height="62.1" rx="2" fill="#C9A227" />
+        <rect x="468.8" y="453.9" width="24.7" height="62.1" rx="2" fill="#C9A227" />
         <rect x="148.4" y="338.5" width="23.0" height="25.2" rx="2" fill="#39404C" />
         <rect x="148.4" y="312.4" width="23.0" height="25.2" rx="2" fill="#39404C" />
         <rect x="172.2" y="338.5" width="23.0" height="25.2" rx="2" fill="#39404C" />
@@ -550,7 +550,7 @@
         <text x="80" y="527" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:7px">納税PR</text>
       </svg>
       <div class="fm-compass-bottom">丸の内地下中央口改札側 ▼</div>
-      <div class="fm-legend"><span class="fm-legend-item"><i style="background:var(--fire)"></i>FACTORY LIMITED</span><span class="fm-legend-item"><i style="background:var(--gold)"></i>THE TSUBAMESANJO</span><span class="fm-legend-item"><i style="background:#39404C"></i>STOCK MARKET</span><span class="fm-legend-item"><i style="background:#24304A"></i>技術展示</span><span class="fm-legend-item"><i style="background:#B0662F"></i>燕三条 名品展</span><span class="fm-legend-item"><i style="background:#5C7A5E"></i>FARM8</span><span class="fm-legend-item"><i style="background:#5B4A7A"></i>ふるさと納税PR</span><span class="fm-legend-item"><i style="background:#8A857A"></i>レジ</span><span class="fm-legend-item"><i style="background:repeating-linear-gradient(45deg,#7A766B 0 3px,#5B584E 3px 6px)"></i>柱（目印）</span><span class="fm-legend-item"><i style="background:none;border:1.6px solid #6B6558;border-radius:50%"></i>商談テーブル</span></div>
+      <div class="fm-legend"><span class="fm-legend-item"><i style="background:#E8401F"></i>FACTORY LIMITED</span><span class="fm-legend-item"><i style="background:#C9A227"></i>THE TSUBAMESANJO</span><span class="fm-legend-item"><i style="background:#39404C"></i>STOCK MARKET</span><span class="fm-legend-item"><i style="background:#24304A"></i>技術展示</span><span class="fm-legend-item"><i style="background:#B0662F"></i>燕三条 名品展</span><span class="fm-legend-item"><i style="background:#5C7A5E"></i>FARM8</span><span class="fm-legend-item"><i style="background:#5B4A7A"></i>ふるさと納税PR</span><span class="fm-legend-item"><i style="background:#8A857A"></i>レジ</span><span class="fm-legend-item"><i style="background:repeating-linear-gradient(45deg,#7A766B 0 3px,#5B584E 3px 6px)"></i>柱（目印）</span><span class="fm-legend-item"><i style="background:none;border:1.6px solid #6B6558;border-radius:50%"></i>商談テーブル</span></div>
       <p class="note">※ 実際の配置図をもとにした簡易図です。出展社の配置は変更となる場合があります。最新情報は会場内の表示でご確認ください。</p>
     </div>
   </div>
@@ -580,17 +580,17 @@
         <p>1751年創業、日本初の金属洋食器専門メーカー。「匙屋に徹す」を理念に、ホテル・レストランから家庭の食卓まで寄り添うカトラリーをつくり続けています。</p>
       </div>
       <div class="e-card">
-        <div class="tile" style="background:var(--gold);color:var(--navy)">THE<br>TSUBAMESANJO</div>
+        <div class="tile" style="background:#C9A227;color:#fff">THE<br>TSUBAMESANJO</div>
         <h3>株式会社タケダ</h3>
         <p>高度な切削加工技術を用いて新しい金属製品を生み出す「TAKEDA DESIGN PROJECT」を展開。生活に潤いと利便性を届ける製品づくりを行っています。</p>
       </div>
       <div class="e-card">
-        <div class="tile" style="background:var(--fire);color:#fff">FACTORY<br>LIMITED</div>
+        <div class="tile" style="background:#E8401F;color:#fff">FACTORY<br>LIMITED</div>
         <h3>水野製作所株式会社</h3>
         <p>昭和12年創業。薪割り用の斧・鉞、板金工具の掴箸を製造。金属部分から木柄まで、三条の職人による手づくりです。</p>
       </div>
       <div class="e-card">
-        <div class="tile" style="background:var(--fire);color:#fff">FACTORY<br>LIMITED</div>
+        <div class="tile" style="background:#E8401F;color:#fff">FACTORY<br>LIMITED</div>
         <h3>株式会社アルチザン</h3>
         <p>燕市の金属加工、高岡の伝統着色技法、山中漆器など、日本各地の手仕事を掛け合わせ、日常に静かな豊かさをもたらすものづくりを行っています。</p>
       </div>
@@ -646,7 +646,7 @@
       <p style="font-size:.86rem;color:var(--ink-soft);font-weight:700;margin-bottom:1rem">出展企業一覧</p>
 
       <div class="exh-group">
-        <span class="zone-label" style="background:var(--gold);color:var(--navy)">THE TSUBAMESANJO</span>
+        <span class="zone-label" style="background:#C9A227;color:#fff">THE TSUBAMESANJO</span>
         <div class="exh-chips">
           <span class="exh-chip">株式会社諏訪田製作所</span>
           <span class="exh-chip">株式会社山谷産業</span>
@@ -656,7 +656,7 @@
       </div>
 
       <div class="exh-group">
-        <span class="zone-label" style="background:var(--fire);color:#fff">FACTORY LIMITED</span>
+        <span class="zone-label" style="background:#E8401F;color:#fff">FACTORY LIMITED</span>
         <div class="exh-chips">
           <span class="exh-chip">株式会社IPS</span>
           <span class="exh-chip">株式会社テーエム</span>
