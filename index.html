@@ -195,7 +195,12 @@
   .fm-t{fill:#fff;font-family:var(--sans);font-weight:900;font-size:15px;letter-spacing:.02em}
   .fm-t-lg{font-size:17px}
   .fm-t-dark{fill:var(--navy)}
+  .fm-layout{display:flex;flex-direction:column;align-items:center;gap:.5rem}
   .fm-legend{display:flex;flex-wrap:wrap;gap:.5rem 1rem;justify-content:center;margin-top:1rem}
+  @media(min-width:760px){
+    .fm-layout{flex-direction:row;align-items:center;justify-content:center;gap:2.5rem}
+    .fm-legend{flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:flex-start;margin-top:0;gap:.65rem}
+  }
   .fm-legend-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.74rem;font-weight:700;color:var(--ink-soft)}
   .fm-legend-item i{width:12px;height:12px;border-radius:3px;display:inline-block;flex:none}
   .floormap .note{font-size:.72rem;color:#8A857A;font-weight:500;margin-top:.9rem}
@@ -437,7 +442,7 @@
     <div class="z-grid">
       <div class="z-card">
         <div class="head c-gold"><span class="en">THE TSUBAMESANJO</span></div>
-        <img class="thumb" src="img/zone-tsubamesanjo.jpg" alt="諏訪田製作所の刃物研磨の様子">
+        <img class="thumb" src="img/exhibitor-suwada.jpg" alt="株式会社諏訪田製作所のつめ切り・ニッパー製品">
         <div class="body">燕三条を代表する定番製品を、実際に手に取って購入できるメインコーナー。まずはここから。
           <p class="zone-co">出展：諏訪田製作所／山谷産業／タケダ／燕物産</p>
         </div>
@@ -458,9 +463,9 @@
       </div>
       <div class="z-card">
         <div class="head c-copper"><span class="en">MEIHIN-TEN</span>燕三条 名品展</div>
-        <img class="thumb" src="img/zone-meihinten.jpg" alt="株式会社フチオカの外観">
+        <img class="thumb" src="img/exhibitor-fuchioka-2.jpg" alt="株式会社フチオカの研磨布製品">
         <div class="body">高級包丁や銅器など、燕三条の技術が息づく逸品を展示。細部の仕上がりや美しさを、じっくりご覧いただけます。
-          <p class="zone-co">出展：後藤鉄工所／フチオカ／下村工業／須佐真（金工作家）</p>
+          <p class="zone-co">出展：後藤鉄工所／フチオカ／下村工業</p>
         </div>
       </div>
       <div class="z-card">
@@ -472,7 +477,7 @@
       </div>
       <div class="z-card">
         <div class="head c-navy">技術展示・商談</div>
-        <div class="tile-ph" style="background:#24304A;color:var(--paper)">技術展示・商談</div>
+        <img class="thumb" src="img/zone-gijutsu.jpg" alt="後藤鉄工所の金属加工によるボールペン">
         <div class="body">プレス・切削・溶接・研磨など、燕三条の加工技術そのものを展示。試作、加工、製造、OEM、商品開発についてもご相談いただけます。
           <p class="zone-co">出展：後藤鉄工所</p>
         </div>
@@ -481,6 +486,8 @@
 
     <div class="floormap">
       <div class="label">FLOOR MAP</div>
+      <div class="fm-layout">
+      <div class="fm-map-col">
       <div class="fm-compass-top">▲ 八重洲地下中央口改札側</div>
       <svg class="fm-svg" viewBox="0 0 540 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場フロアマップ：配置図CADをもとに実寸比率・実際の向きで作成。上が八重洲地下中央口改札側、下が丸の内地下中央口改札側。中央に大小2本の柱、商談テーブルが2卓、右側にレジがあります">
         <defs>
@@ -551,7 +558,9 @@
         <text x="80" y="527" text-anchor="middle" class="fm-t fm-t-dark" style="font-size:7px">納税PR</text>
       </svg>
       <div class="fm-compass-bottom">丸の内地下中央口改札側 ▼</div>
+      </div>
       <div class="fm-legend"><span class="fm-legend-item"><i style="background:#E8401F"></i>FACTORY LIMITED</span><span class="fm-legend-item"><i style="background:#C9A227"></i>THE TSUBAMESANJO</span><span class="fm-legend-item"><i style="background:#39404C"></i>STOCK MARKET</span><span class="fm-legend-item"><i style="background:#24304A"></i>技術展示</span><span class="fm-legend-item"><i style="background:#B0662F"></i>燕三条 名品展</span><span class="fm-legend-item"><i style="background:#5C7A5E"></i>FARM8</span><span class="fm-legend-item"><i style="background:#5B4A7A"></i>ふるさと納税PR</span><span class="fm-legend-item"><i style="background:#8A857A"></i>レジ</span><span class="fm-legend-item"><i style="background:repeating-linear-gradient(45deg,#7A766B 0 3px,#5B584E 3px 6px)"></i>柱（目印）</span><span class="fm-legend-item"><i style="background:none;border:1.6px solid #6B6558;border-radius:50%"></i>商談テーブル</span></div>
+      </div>
       <p class="note">※ 実際の配置図をもとにした簡易図です。出展社の配置は変更となる場合があります。最新情報は会場内の表示でご確認ください。</p>
     </div>
   </div>
@@ -586,12 +595,12 @@
         <p>高度な切削加工技術を用いて新しい金属製品を生み出す「TAKEDA DESIGN PROJECT」を展開。生活に潤いと利便性を届ける製品づくりを行っています。</p>
       </div>
       <div class="e-card">
-        <div class="tile" style="background:#E8401F;color:#fff">FACTORY<br>LIMITED</div>
+        <img class="thumb" src="img/exhibitor-mizuno.jpg" alt="水野製作所株式会社のクラフトアックス">
         <h3>水野製作所株式会社</h3>
         <p>昭和12年創業。薪割り用の斧・鉞、板金工具の掴箸を製造。金属部分から木柄まで、三条の職人による手づくりです。</p>
       </div>
       <div class="e-card">
-        <div class="tile" style="background:#E8401F;color:#fff">FACTORY<br>LIMITED</div>
+        <img class="thumb" src="img/exhibitor-artisan.jpg" alt="株式会社アルチザンの鎚起銅器の急須">
         <h3>株式会社アルチザン</h3>
         <p>燕市の金属加工、高岡の伝統着色技法、山中漆器など、日本各地の手仕事を掛け合わせ、日常に静かな豊かさをもたらすものづくりを行っています。</p>
       </div>
@@ -688,7 +697,6 @@
           <span class="exh-chip">株式会社後藤鉄工所</span>
           <span class="exh-chip">株式会社フチオカ</span>
           <span class="exh-chip">下村工業株式会社</span>
-          <span class="exh-chip">金工作家　須佐真</span>
         </div>
       </div>
 
